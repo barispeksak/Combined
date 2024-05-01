@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "991830332439",
+    "project_id": "combineddemo-c8490",
+    "storage_bucket": "combineddemo-c8490.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991830332439:android:1d928d53a8964e6a83b852",
+        "android_client_info": {
+          "package_name": "com.example.combineddemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDyUsXvyg4oS8qjbSogeNwLK1oyJ9T_Mw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
