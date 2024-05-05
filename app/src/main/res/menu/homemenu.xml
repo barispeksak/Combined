@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_home"
+        android:id="@+id/home"
         android:icon="@drawable/house"
         android:title="Home" />
     <item
-        android:id="@+id/nav_ranking"
+        android:id="@+id/ranking"
         android:icon="@drawable/ranking"
         android:title="Ranking" />
     <!-- Add more items as needed -->
 
     <item
-        android:id="@+id/nav_add"
+        android:id="@+id/add"
         android:icon="@drawable/add"
         android:title="Add" />
     <item
-        android:id="@+id/nav_profile"
+        android:id="@+id/profile"
         android:icon="@drawable/user"
         android:title="Profile" />
 </menu>
