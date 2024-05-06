@@ -19,6 +19,7 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.combineddemo.databinding.FragmentAddPhotoBinding;
@@ -95,6 +96,38 @@ public class AddPhotoFragment extends Fragment {
         return view;
     }
 
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ImageView imageView = view.findViewById(R.id.imageView);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED)
+                {
+                    ActivityCompat.requestPermissions(requireActivity(), new String[]{android.Manifest.permission.READ_MEDIA_IMAGES, android.Manifest.permission.READ_MEDIA_AUDIO, android.Manifest.permission.READ_MEDIA_VIDEO}, 1);
+
+                    Snackbar.make(view, "Permission needed for Gallery", Snackbar.LENGTH_INDEFINITE).setAction("Give Permissiom", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            //Ask permission,
+                            permissionLauncher.launch(android.Manifest.permission.READ_MEDIA_IMAGES);
+                            permissionLauncher.launch(android.Manifest.permission.READ_MEDIA_AUDIO);
+                            permissionLauncher.launch(Manifest.permission.READ_MEDIA_VIDEO);
+                        }
+                    }).show();
+                }
+                else
+                {
+                    Intent intentToGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    activityResultLauncher.launch(intentToGallery);
+                }
+            }
+        });
+
+    }
+
     public void uploadButtonClicked()
     {
 
@@ -102,7 +135,7 @@ public class AddPhotoFragment extends Fragment {
 
 
 
-    public void selectedImage(View view)
+    /*public void selectedImage(View view)
     {
         if(ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.READ_MEDIA_AUDIO) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.READ_MEDIA_VIDEO) != PackageManager.PERMISSION_GRANTED)
         {
@@ -124,6 +157,8 @@ public class AddPhotoFragment extends Fragment {
             activityResultLauncher.launch(intentToGallery);
         }
     }
+
+     */
 
     public void registerLauncher()
     {
