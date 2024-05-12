@@ -52,4 +52,5 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-storage")
     implementation("com.google.firebase:firebase-firestore")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 }

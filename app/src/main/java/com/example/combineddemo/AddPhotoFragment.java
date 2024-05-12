@@ -66,9 +66,6 @@ public class AddPhotoFragment extends Fragment {
 
     private FirebaseFirestore firebaseFirestore;
 
-    //private FirebaseFirestore firebaseFirestore;
-
-    //private StorageReference storageReference;
     Uri imageData;
 
     Bitmap selectedImage;

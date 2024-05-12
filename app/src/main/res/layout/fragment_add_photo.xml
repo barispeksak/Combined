@@ -8,13 +8,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#DDD5CB"
         tools:context=".AddPhotoFragment">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="275dp"
             android:layout_height="266dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="36dp"
             android:onClick="selectedImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,11 +26,12 @@
             android:id="@+id/commentText"
             android:layout_width="240dp"
             android:layout_height="53dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="132dp"
             android:ems="10"
-            android:hint="Enter a comment"
+            android:hint="Enter a description"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -37,9 +39,10 @@
             android:id="@+id/uploadButtonClicked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="168dp"
             android:text="Share"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/commentText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
