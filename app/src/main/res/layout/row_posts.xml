@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relativeLayoutPost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageViewUser"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/testbackground"
+            app:civ_border_color="#434343"
+            app:civ_border_width="1dp"/>
+
+        <Button
+            android:id="@+id/buttonUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/circleImageViewUser"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/circleImageViewUser"
+            android:backgroundTint="#00000000"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="1dp"
+            android:text="Username"
+            android:textColor="#303030"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/radioButtonLayout"
+            android:animateLayoutChanges="true">
+
+
+            <ImageButton
+                android:id="@+id/imageButtonComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chat_24px"
+                android:background="@drawable/circularbackground"
+                android:backgroundTint="#C0CBC5"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/textViewScoreAverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/small_grade"
+                android:text="score"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:elegantTextHeight="true"
+                android:background="@drawable/circularcornerbackground"
+                android:backgroundTint="#C0CBC5"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/grade_24px"
+                android:background="@drawable/circularbackground"
+                android:backgroundTint="#C0CBC5"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/scoreRadioGroup">
+
+                <RadioButton
+                    android:id="@+id/imageButtonScore5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/counter_5_24px"
+                    android:background="@drawable/circularbackground"
+                    android:backgroundTint="#C0CBC5"/>
+                <RadioButton
+                    android:id="@+id/imageButtonScore4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/counter_4_24px"
+                    android:background="@drawable/circularbackground"
+                    android:backgroundTint="#C0CBC5"/>
+                <RadioButton
+                    android:id="@+id/imageButtonScore3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/counter_3_24px"
+                    android:background="@drawable/circularbackground"
+                    android:backgroundTint="#C0CBC5"/>
+                <RadioButton
+                    android:id="@+id/imageButtonScore2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/counter_2_24px"
+                    android:background="@drawable/circularbackground"
+                    android:backgroundTint="#C0CBC5"/>
+                <RadioButton
+                    android:id="@+id/imageButtonScore1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/counter_1_24px"
+                    android:background="@drawable/circularbackground"
+                    android:backgroundTint="#C0CBC5"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

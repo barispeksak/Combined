@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/friendItem"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    app:cardCornerRadius="25dp"
+    android:padding="15dp"
+    android:elevation="10dp">
+
+    <LinearLayout
+        android:id="@+id/friendButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#CBD3DD"
+        android:clickable="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/friendImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/profilebackground"
+            app:civ_border_color="#A07855"
+            app:civ_border_width="2dp"/>
+
+        <TextView
+            android:id="@+id/friendName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="userName"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:background="#00000000"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.FriendListFragment"
+    android:background="#DDD5CB"
+    android:id="@+id/friend_list_layout">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/topbar"
+        android:layout_margin="10dp">
+
+        <ImageButton
+            android:id="@+id/backFriendListButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#CBD3DD"
+            android:background="@drawable/circlebutton"
+            android:src="@drawable/back_arrow"
+            android:elevation="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Friend List"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friendsRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar"/>
+
+</RelativeLayout>
