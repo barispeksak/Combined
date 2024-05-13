@@ -3,15 +3,20 @@ package com.example.combineddemo.home;
 import androidx.lifecycle.ViewModel;
 
 import com.example.combineddemo.R;
-
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
 public class ModelPost extends ViewModel {
 
+    private FirebaseAuth firebaseAuth;
+    private FirebaseFirestore firebaseFirestore;
     ArrayList<ModelComment> postComment;
     final ModelUser sharer;
-    String sharerId,postId,description;
+    String postId,description;
+
+    int sharerId;
     int profileImage,postImage;
     String sharerName;
     double score;
@@ -45,11 +50,11 @@ public class ModelPost extends ViewModel {
     }
 
 
-    public String getSharerId() {
+    public int getSharerId() {
         return sharerId;
     }
 
-    public void setSharerId(String sharerId) {
+    public void setSharerId(int sharerId) {
         this.sharerId = sharerId;
     }
 
@@ -107,11 +112,11 @@ public class ModelPost extends ViewModel {
 
     public static ArrayList<ModelPost> getPostData()
     {
-        ModelUser user1 = new ModelUser("1234", "sebnem","jkfh","12345","helloooo",R.drawable.profilebackground);
-        ModelUser user2 = new ModelUser("1234", "user2","jkfh","12345","bio kdlsjf\ndjskj",R.drawable.ic_dashboard_black_24dp);
-        ModelUser user3 = new ModelUser("1234", "user3","jkfh","12345","helloooo\n sjdkdjh",R.drawable.ic_launcher_background);
-        ModelUser user4 = new ModelUser("1234", "user4","jkfh","12345","djjfj",R.drawable.testbackground);
-        ModelUser user5 = new ModelUser("1234", "user5","jkfh","12345","jslkjd",R.drawable.ic_launcher_background);
+        ModelUser user1 = new ModelUser(1234, "sebnem","jkfh","12345","helloooo",R.drawable.profilebackground);
+        ModelUser user2 = new ModelUser(1234, "user2","jkfh","12345","bio kdlsjf\ndjskj",R.drawable.ic_dashboard_black_24dp);
+        ModelUser user3 = new ModelUser(1234, "user3","jkfh","12345","helloooo\n sjdkdjh",R.drawable.ic_launcher_background);
+        ModelUser user4 = new ModelUser(1234, "user4","jkfh","12345","djjfj",R.drawable.testbackground);
+        ModelUser user5 = new ModelUser(1234, "user5","jkfh","12345","jslkjd",R.drawable.ic_launcher_background);
 
         user1.addFriend(user2);
         user1.addFriend(user3);

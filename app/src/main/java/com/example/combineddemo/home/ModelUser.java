@@ -3,13 +3,15 @@ package com.example.combineddemo.home;
 import java.util.ArrayList;
 
 public class ModelUser {
-    String userId, userName,email, password, biography;
+    String userName,email, password, biography;
+
+    int userId;
     int rank, profilePhoto;
     ArrayList<ModelUser> friendList;
     ArrayList<ModelPost> sharedPosts;
     boolean isAdvistor;
 
-    public ModelUser(String userId, String userName, String email, String password, String biography, int profilePhoto) {
+    public ModelUser(int userId, String userName, String email, String password, String biography, int profilePhoto) {
         this.userId = userId;
         this.userName = userName;
         this.email = email;
@@ -22,11 +24,11 @@ public class ModelUser {
         this.isAdvistor = false;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
