@@ -1,15 +1,15 @@
 package com.example.combineddemo.home;
 
 public class ModelComment {
-    String commentId;
+    int commentId;
 
     String commentText;
     boolean isFriendComment, isAdvisorComment, isDesciption;
     ModelUser sharer;
-    String sharerId;
+    int sharerId;
     String sharerName;
 
-    public ModelComment(String commentId, ModelUser sharer, String commentText, boolean isFriendComment, boolean isAdvisorComment, boolean isDesciption) {
+    public ModelComment(int commentId, ModelUser sharer, String commentText, boolean isFriendComment, boolean isAdvisorComment, boolean isDesciption) {
         this.sharer = sharer;
         this.commentId = commentId;
         this.commentText = commentText;
@@ -21,11 +21,11 @@ public class ModelComment {
     }
 
 
-    public String getCommentId() {
+    public int getCommentId() {
         return commentId;
     }
 
-    public void setCommentId(String commentId) {
+    public void setCommentId(int commentId) {
         this.commentId = commentId;
     }
 
@@ -61,11 +61,11 @@ public class ModelComment {
         isDesciption = desciption;
     }
 
-    public String getSharerId() {
+    public int getSharerId() {
         return sharerId;
     }
 
-    public void setSharerId(String sharerId) {
+    public void setSharerId(int sharerId) {
         this.sharerId = sharerId;
     }
 

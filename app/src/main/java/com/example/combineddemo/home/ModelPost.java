@@ -32,7 +32,7 @@ public class ModelPost extends ViewModel {
         this.sharer = sharer;
         if(!description.isEmpty())
         {
-            postComment.add(new ModelComment("123",this.sharer ,description ,false,false,true));
+            postComment.add(new ModelComment(123,this.sharer ,description ,false,false,true));
         }
     }
 
@@ -131,12 +131,12 @@ public class ModelPost extends ViewModel {
         user4.addFriend(user5);
 
         ArrayList<ModelComment> comments = new ArrayList<>();
-        comments.add(new ModelComment("123",user4,"tesettestfriend",true,false,false));
-        comments.add(new ModelComment("123",user3,"tesettestadvisor",false,true,false));
-        comments.add(new ModelComment("123",user2,"tesettestRegular",false,false,false));
-        comments.add(new ModelComment("123",user5,"tesettestadvisorandfriend",true,true,false));
-        comments.add(new ModelComment("123",user3,"friendtest",true,false,false));
-        comments.add(new ModelComment("123",user2,"tesettestfriendcomment",true,false,false));
+        comments.add(new ModelComment(123,user4,"tesettestfriend",true,false,false));
+        comments.add(new ModelComment(123,user3,"tesettestadvisor",false,true,false));
+        comments.add(new ModelComment(123,user2,"tesettestRegular",false,false,false));
+        comments.add(new ModelComment(123,user5,"tesettestadvisorandfriend",true,true,false));
+        comments.add(new ModelComment(123,user3,"friendtest",true,false,false));
+        comments.add(new ModelComment(123,user2,"tesettestfriendcomment",true,false,false));
 
 
         ArrayList<ModelPost> dataList = new ArrayList<>();
