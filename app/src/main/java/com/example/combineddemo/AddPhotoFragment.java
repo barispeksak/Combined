@@ -9,6 +9,13 @@ import android.graphics.ImageDecoder;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -18,14 +25,6 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-
-import android.provider.MediaStore;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.combineddemo.databinding.FragmentAddPhotoBinding;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -181,12 +180,13 @@ public class AddPhotoFragment extends Fragment {
                                     FirebaseUser firebaseUser = auth.getCurrentUser();
                                     String userEmail = firebaseUser.getEmail();
 
-                                    String comment = binding.commentText.getText().toString();
+                                    String description = binding.commentText.getText().toString();
 
                                     HashMap<String, Object> postData = new HashMap<>();
                                     postData.put("useremail",userEmail);
+                                    //postData.put("sharerId",);
                                     postData.put("downloadurl",downloadUrl);
-                                    postData.put("comment",comment);
+                                    postData.put("description",description);
                                     postData.put("date", FieldValue.serverTimestamp());
 
                                     firebaseFirestore.collection("Posts").add(postData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
