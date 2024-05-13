@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class ModelUser {
     String userName,email, password, biography;
 
-    int userId;
+    int userId = 0;
     int rank, profilePhoto;
     ArrayList<ModelUser> friendList;
     ArrayList<ModelPost> sharedPosts;
     boolean isAdvistor;
 
-    public ModelUser(int userId, String userName, String email, String password, String biography, int profilePhoto) {
-        this.userId = userId;
+    public ModelUser( String userName, String email, String password, String biography, int profilePhoto) {
+        this.userId++;
         this.userName = userName;
         this.email = email;
         this.password = password;

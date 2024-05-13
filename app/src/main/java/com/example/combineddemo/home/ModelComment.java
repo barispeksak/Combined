@@ -1,7 +1,7 @@
 package com.example.combineddemo.home;
 
 public class ModelComment {
-    int commentId;
+    static int commentId = 0;
 
     String commentText;
     boolean isFriendComment, isAdvisorComment, isDesciption;
@@ -9,9 +9,10 @@ public class ModelComment {
     int sharerId;
     String sharerName;
 
-    public ModelComment(int commentId, ModelUser sharer, String commentText, boolean isFriendComment, boolean isAdvisorComment, boolean isDesciption) {
+    public ModelComment( ModelUser sharer, String commentText, boolean isFriendComment, boolean isAdvisorComment, boolean isDesciption) {
+
+        commentId++;
         this.sharer = sharer;
-        this.commentId = commentId;
         this.commentText = commentText;
         this.isFriendComment = isFriendComment;
         this.isAdvisorComment = isAdvisorComment;

@@ -49,8 +49,7 @@ public class MainActivity extends AppCompatActivity {
             mAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                 @Override
                 public void onSuccess(AuthResult authResult) {
-                    ModelUser newUser = new ModelUser(numberOfUser, username, email, password, "", 0 );
-                    numberOfUser++;
+                    ModelUser newUser = new ModelUser(username, email, password, "", 0 );
                     Intent intent = new Intent(MainActivity.this, MainPage.class);
                     startActivity(intent);
                     finish();
