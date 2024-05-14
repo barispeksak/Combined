@@ -128,7 +128,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostHolder> {
         FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.setReorderingAllowed(true);
-        fragmentTransaction.replace(R.id.home, fragment);
+        fragmentTransaction.replace(R.id.home_layout, fragment);
         fragmentTransaction.commitNow();
     }
 
