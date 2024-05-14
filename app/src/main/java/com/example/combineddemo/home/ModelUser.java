@@ -1,7 +1,12 @@
 package com.example.combineddemo.home;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -12,7 +17,7 @@ import java.util.HashMap;
 public class ModelUser {
     String userName,email, password, biography;
 
-    int userId = 0;
+    static int userId = 0;
     int rank, profilePhoto;
 
     private FirebaseAuth auth;
@@ -44,21 +49,29 @@ public class ModelUser {
 
         FirebaseUser firebaseUser = auth.getCurrentUser();
         if (firebaseUser != null) {
-            try {
+
                 HashMap<String, Object> postData = new HashMap<>();
                 postData.put("id", userId);
-                postData.put("username", this.userName);
-                postData.put("useremail", this.email);
-                postData.put("password", this.password);
-                postData.put("profilePhotoUrl", this.profilePhoto);
-                postData.put("biography", this.biography);
+                postData.put("username", userName);
+                postData.put("useremail", email);
+                postData.put("password", password);
+                postData.put("profilePhotoUrl", profilePhoto);
+                postData.put("biography", biography);
 
-                firebaseFirestore.collection("users").add(postData);
-            } catch (Exception e) {
-                e.printStackTrace();
+                firebaseFirestore.collection("users").add(postData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        System.out.println("Succes");
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        System.out.println("Fail");
+                    }
+                });
 
-            }
-        } else {
+        }
+        else {
             System.out.println("KFmsdkfmkdsmfkasmfkaslda");
         }
     }
