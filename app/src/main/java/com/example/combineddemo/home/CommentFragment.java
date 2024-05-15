@@ -174,6 +174,12 @@ public class CommentFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String comment = typeText.getText().toString();
+                ModelComment newComment = new ModelComment(CommentFragment.this.postOwner, comment, false,false,false);
+                CommentFragment.this.post.addPostComment(newComment);
+                CommentFragment.this.advisorCommentAdapter.notifyDataSetChanged();
+                CommentFragment.this.friendCommentAdapter.notifyDataSetChanged();
+                CommentFragment.this.regularCommentAdapter.notifyDataSetChanged();
+
             }
         });
 

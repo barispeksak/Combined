@@ -27,6 +27,7 @@ public class MainPage extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         frameLayout = findViewById(R.id.frame_layout);
+        replaceFragment(new HomeFragment(), false);
 
 
 
@@ -37,7 +38,7 @@ public class MainPage extends AppCompatActivity {
                 int itemID = item.getItemId();
 
                 if(itemID == R.id.home) {
-                    replaceFragment(new HomeFragment(), false);
+                    replaceFragment(new HomeFragment(), true);
                 } else if (itemID == R.id.add) {
                     replaceFragment(new AddPhotoFragment(), false);
                 } else if(itemID == R.id.profile) {

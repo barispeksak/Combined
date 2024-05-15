@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,13 +14,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         android:textSize="35dp"
-        android:textStyle="bold"
+        android:textStyle="bold"/>
 
-
-
-        >
-
-    </TextView>
 
 
     <androidx.cardview.widget.CardView
@@ -32,10 +28,7 @@
         android:backgroundTint="#ddd5cb"
         android:layout_above="@id/cardview"
         android:layout_marginBottom="25dp"
-        app:cardCornerRadius="15dp"
-
-
-        >
+        app:cardCornerRadius="15dp">
 
         <EditText
             android:id="@+id/editText1"

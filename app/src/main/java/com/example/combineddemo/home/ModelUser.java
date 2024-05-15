@@ -57,6 +57,7 @@ public class ModelUser {
                 postData.put("password", password);
                 postData.put("profilePhotoUrl", profilePhoto);
                 postData.put("biography", biography);
+                postData.put("posts", null);
 
                 firebaseFirestore.collection("users").add(postData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
