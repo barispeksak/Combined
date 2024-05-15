@@ -19,6 +19,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,6 +38,7 @@ public class ProfieFragment extends Fragment {
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    private FirebaseFirestore firebaseFirestore;
     public ProfieFragment() {
         // Required empty public constructor
     }
@@ -59,6 +63,7 @@ public class ProfieFragment extends Fragment {
 
         // getting current user data
         firebaseUser = firebaseAuth.getCurrentUser();
+        firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
 
@@ -78,7 +83,24 @@ public class ProfieFragment extends Fragment {
         changePasswordButton = view.findViewById(R.id.buttonChangePassword);
         logoutButton = view.findViewById(R.id.buttonLogOut);
 
-
+        if (firebaseUser != null) {
+            DocumentReference docRef = firebaseFirestore.collection("users").document(firebaseUser.getUid());
+            docRef.get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        String name = document.getString("username");
+                        userName.setText(name);
+                    } else {
+                        userName.setText("User");
+                    }
+                } else {
+                    userName.setText("User");
+                }
+            });
+        } else {
+            userName.setText("User");
+        }
         friendListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
