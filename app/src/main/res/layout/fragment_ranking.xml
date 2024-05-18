@@ -1,40 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9B7F9F"
-    tools:context=".RankingFragment">
+    android:background="#DDD5CB"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <!-- this text view is the title for the rank page -->
+    <TextView
+        android:id="@+id/topTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#70614B"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Top Users Of This Month"
+        android:textSize="18sp" />
 
-        <!-- this text view is the title for the rank page -->
-        <TextView
-            android:id="@+id/topTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Top Users Of This Month"
-            android:textSize="18sp" />
+    <!-- thanks to recyclerview, we are able to scroll the rank page -->
+    <!-- realise that I set the layout_height as 0 dp (as it was "match_parent" before) and... -->
+    <!-- ...and added the layout_weight (not width) as 1 and finally added paddingBottom as 56dp because... -->
+    <!-- ...because the last card was hidden behind the navigation bar -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="56dp"
+        android:clipToPadding="false"/>
 
-        <!-- thanks to recyclerview, we are able to scroll the rank page -->
-        <!-- realise that I set the layout_height as 0 dp (as it was "match_parent" before) and... -->
-        <!-- ...and added the layout_weight (not width) as 1 and finally added paddingBottom as 56dp because... -->
-        <!-- ...because the last card was hidden behind the navigation bar -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="#EDD9D9"
-            android:clipToPadding="false"
-            android:paddingBottom="56dp" />
-
-        <!-- linear layout helps us to scroll the page-->
-    </LinearLayout>
-
-</FrameLayout>
+    <!-- linear layout helps us to scroll the page-->
+</LinearLayout>

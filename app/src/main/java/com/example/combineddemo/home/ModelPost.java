@@ -143,7 +143,7 @@ public class ModelPost extends ViewModel {
 
 
         ArrayList<ModelPost> dataList = new ArrayList<>();
-        ModelPost androidData1 = new ModelPost(user1,"123",  R.drawable.testbackground, 4.1);
+        ModelPost androidData1 = new ModelPost(user1,"123",  R.drawable.testbackground, 0);
         dataList.add(androidData1);
         androidData1.addPostComment(comments.get(0));
         androidData1.addPostComment(comments.get(1));
@@ -152,20 +152,20 @@ public class ModelPost extends ViewModel {
         androidData1.addPostComment(comments.get(4));
         androidData1.addPostComment(comments.get(5));
 
-        ModelPost androidData2 = new ModelPost(user2,"123", R.drawable.counter_1_24px, 4.2);
+        ModelPost androidData2 = new ModelPost(user2,"123", R.drawable.counter_1_24px, 0);
         dataList.add(androidData2);
-        ModelPost androidData3 = new ModelPost(user3,"123",   R.drawable.counter_2_24px,  4.3 );
+        ModelPost androidData3 = new ModelPost(user3,"123",   R.drawable.counter_2_24px,  0);
         dataList.add(androidData3);
-        ModelPost androidData4 = new ModelPost(user4, "213",  R.drawable.counter_3_24px,  4.4 );
+        ModelPost androidData4 = new ModelPost(user4, "213",  R.drawable.counter_3_24px,  0 );
         dataList.add(androidData4);
-        ModelPost androidData5 = new ModelPost(user5, "123",  R.drawable.counter_4_24px,  4.5 );
+        ModelPost androidData5 = new ModelPost(user5, "123",  R.drawable.counter_4_24px,  0 );
         dataList.add(androidData5);
 
-        ModelPost androidData6 = new ModelPost(user1,"234",  R.drawable.testbackground, 4.1);
+        ModelPost androidData6 = new ModelPost(user1,"234",  R.drawable.testbackground, 0);
         dataList.add(androidData6);
-        ModelPost androidData7 = new ModelPost(user1,"345",  R.drawable.testbackground, 4.1);
+        ModelPost androidData7 = new ModelPost(user1,"345",  R.drawable.testbackground, 0);
         dataList.add(androidData7);
-        ModelPost androidData8 = new ModelPost(user1,"566",  R.drawable.testbackground, 4.1);
+        ModelPost androidData8 = new ModelPost(user1,"566",  R.drawable.testbackground, 0);
         dataList.add(androidData8);
 
         user1.addSharedPosts(androidData1);
