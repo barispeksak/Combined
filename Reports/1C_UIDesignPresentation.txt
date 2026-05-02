@@ -1,0 +1,145 @@
+Pentagon
+
+COMBINED
+Presented by group Pentagon
+Şebnem Bihter Keleş
+Ege Şeşen
+
+Ahmet Ozan Annagür
+Nevzat Han Altın
+Barış Peksak
+
+WELCOME
+In Our Group Project
+
+INTRODUCTION
+Beta version is for Bilkenters
+Can expand to global market later
+Must appeal to a diverse range of users
+Shouldn’t require any extra skills beyond basic abilities
+Will be used in short periods of time but frequently
+Clear content and no unnecessary information
+
+Sitemap
+
+Launch Page
+First page to everyone
+Sign in button
+Sign up button
+Get help button
+
+Get Help
+Will be useful if the user is stuck in launch page
+Will include text box and send button
+The text has been entered will be sent to appointed
+email.
+Only developers will be able to see the emails.
+
+Sign In Page
+Check whether the user has already signed in
+If the user is not logged in this page will ask user
+name and password.
+Verify whether the password and user name
+match
+
+Sign Up Page
+The user's name and password for the new
+account
+If the password is strong enough according to
+some requirements like minimum character
+number, whether a special character and
+number is used or not),
+If conditions are met click the sign-up button and
+the profile will be created and the user will be
+directed to the main page
+
+Podium(Main Page)
+Display posts
+Score combines 1 to 5
+Comment on posts
+
+Bar Section
+Can be seen on every page
+Reach ranking page
+Go back to Podium(Main page)
+Reach profile page
+Create new post
+
+Create Post Page
+Select image from gallery
+Add explanation to top of its comment page
+Create new post
+
+Comment Page
+Each post have different comment pages
+If the post owner added an explanation to his post,
+this explanation will be pinned at the top of comment
+page
+The comments of advisors will be higher than those of
+others
+Last sent comment will be seen at the top of the page
+
+Ranking Page
+It will be a ranking list of the user’s last combine posts
+Rank will decided based on score averages
+Monthly update
+Top 5 user are advisors
+
+Profile Page
+2 types of profile page
+1.) Users own profile
+Display rofile details such as the user name and his
+current rank
+Allow users to reach his old posts and friends list.
+Change password
+Edit profile button
+
+Profile Page
+
+2 types of profile page
+
+2.) Other users see this type of profile
+Reach other users' old posts, friend lists, ranks, and username
+Only for display purposes and adding friend, so nobody can
+make any changes
+To add profile owner as a friend click add frien button.
+On both page types:
+Log-out button to sign out
+unless the user log out, account will stay signed in
+when the user clicks the account will be signed out, and the
+user will be directed to the Launch Page
+
+Old Post Page
+The users can see all old posts on this page, and the
+last post will added to the end of this page.
+
+Friends List Page
+Friend list of users is be displayed
+Anyone can reach profiles on this page by clicking on
+names.
+When the user adds a new friend, this new friend will
+be seen end of this list.
+
+Change Password
+Page
+Allows users to change their current password.
+Asks for the current password and then asks for a
+new password
+Enter new password two times to confirm it
+When clicked to the save button check the new
+password if it is strong enough
+(The strength of a password is determined by some
+requirements such as character count and usage of special
+characters)
+
+Conclusion
+Targeting everyday usage.
+Maintaining interface simplicity while increasing
+usage diversity
+navigate between desired pages without getting lost
+will bring a new breath to the social media sector
+(Hopefully)
+
+﻿THANK YOU
+
+

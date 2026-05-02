@@ -1,0 +1,135 @@
+CS102
+
+Spring 2023/2024
+
+Instructor:
+
+Aynur Dayanık
+
+Assistant:
+
+Project
+Group
+
+Sinan Çavdar
+
+~ Combined ~
+
+1C
+Criteria
+
+TA/Grade
+r
+
+Presentation
+
+Pentagon
+Ahmet Ozan Annagür, Barış Peksak, Ege Şeşen, Şebnem Bihter Keleş,
+Nevzat Han Altın
+Overall
+
+Requirements Report
+( Version 1.0 )
+1 April 2024
+
+1.
+
+Introduction
+Social media dramatically impacts our thoughts and behaviors in the modern world, affecting
+every part of our lives. When combined with fashion, these platforms become potent forces
+that shape trends and self-expression. It increases visibility and community involvement while
+making fashion. A sophisticated grasp of this relationship's effects on influence, creativity,
+and social norms is necessary to navigate its complicated relationship. When we designed the
+Combined, we understood that these relationships would help us maximize social media's
+positive effects in Bilkent fashion. By starting with this motto, we created an android
+application that offers an atmosphere where Bilkenters can freely express themselves without
+hesitation and where they get into competition, which will result in improving their style.
+
+2.
+
+Details
+
+2.1
+
+Features
+“Combined” will use an Android database. Bilkent students will interact with each other via
+this app. By uniting fashion and social media, the app will have a unique function, allowing
+users to express their opinions while showing their fashion skills. The ranking system will
+choose who has the best combination among all students monthly. Besides, “Combined” will
+have many features that ease the experience of Bilkent students. We are here to create a friendly
+environment to help many unfashionable students. The app also has features:
+1. Profile page: Combined, it will have a profile section that enables students to express
+themselves and show their fashion online. The profile section will also keep the profile up to
+
+Inst
+
+date by adding new photos to the group of images that have been shared before. Other users
+can reach any profile anytime by the personal "Friend List" feature.
+2. Ranking the fashion: The best-looking Bilkenter will be displayed on the apex, which every
+other user can easily see. The list will be updated monthly. Congratulations, you are the best!
+3. Interactions with posts: Combined will allow Bilkent students to rank each other's combines
+by one up to 5 or skip if they do not want to share their opinions. This will encourage students
+to improve their combined skills.
+4. Sharing post: Users can share their combined content whenever they want; it is as close as
+one click. New shared photos will be added to the sharer profile section immediately.
+5. Adding a friend: When a user wants to add someone as a friend, he will only need to reach
+the desired profile from the main page or others' friend list, that's all! When desired, users can
+get other profiles by selecting them from the "Friend List."
+6. Commenting: Every user will feel free to share their best feelings and opinions by
+contributing a comment page, which will be unique to each post. If the user who shared the post
+wants to inform others, he can add a note, which will be pinned at the top of the comment
+section.
+7. Advisors: Advisors will be chosen according to their success on the ranking page; the top 10
+on the ranking list will have an opportunity. Advisors' comments will be displayed higher on
+others' comment pages. Advisors will have an "Advisor Badge" displayed in their profile.
+
+2.2 Target Audience
+When planning the Combined social media platform, we aimed to develop a warm
+environment among Bilkent students. Sharing personal photos globally might be inconvenient
+for some students. To achieve privacy, the beta version of Combined will only be available to
+students in Bilkent. In this way, students can express themselves without needing anything
+else than their combines.
+
+2.3
+
+Where did we get an idea?
+Instagram[1]: Instagram is a photo and video-sharing social networking service that allows
+users to upload media that can be edited with filters, organized by hashtags, and associated
+with a location via geographical tagging1. This variety sometimes needs clarification, and
+users spend their precious time surfing between unrelated topics. On the other hand,
+Combined is built on specific issues to reduce confusion; users find what they are here for.
+Combyne[2]: In this application, users share their combines without showing themselves; they
+crop themselves from their outfits and post them as online stickers. However, this requires
+time and some skills from users and restricts its usability for everyone. Our app provides
+safety by making it accessible to specific groups of people. Also, sharing posts Combined
+takes little time and no skill.
+Wear[3]: The Wear app functions similarly to a shopping platform, allowing users to display
+combined advice or prices to indicate how much money is needed to purchase these.
+Nevertheless, in Combined, there is no such thing as financial discrimination, so pricing is not
+included in matching clothing colors or styles. The app will compare how well the clothes
+match and show which matches are rated better on a separate page, leaving other users'
+
+displays on the main page unhindered. The Combined app gives everyone an equal
+opportunity to show themselves.
+
+3.
+
+Summary & Conclusions
+In conclusion, Combined is an Android social media app that will help the Bilkent
+community stay in touch. This app's primary features include enabling users to share their
+combine via their phones, which comes in handy when they need advice from other
+Bilkenters (ranked on a scale of 1 to 5). This app's profile, ranking, and home pages are
+additional advanced features that will help students connect with one another. For instance,
+as a computer engineering student in Bilkent, I find dressing appropriately challenging.
+Thus, students will feel better about themselves and gain confidence when they see how
+others rate them on a scale of 1 to 5, even if they are not in good shape.
+
+REFERENCES
+1- “Instagram.” Wikipedia, Wikimedia Foundation, 2 Mar. 2024,
+en.wikipedia.org/wiki/Instagram. Accessed 05 Mar. 2024.
+2- Combyne, www.combyne.com/. Accessed 5 Mar. 2024.
+3- “Wear - Fashion Lookbook” Google, 20 Apr. 2015,
+play.google.com/store/apps/details?id=com.starttoday.android.wear&hl=en_US.
+Accessed 05 Mar. 2024.
+
+
