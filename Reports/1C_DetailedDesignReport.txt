@@ -1,0 +1,206 @@
+CS102
+
+Spring 2023/24
+
+Instructor:
+
+Aynur Dayanık
+
+Assistant:
+
+Sinan Çavdar
+
+Project
+Group
+
+1C
+
+~ Combined ~
+
+Criteria
+
+TA/Grader
+
+Presentation
+
+Pentagon
+Şebnem Bihter Keleş, Ege Şeşen, Nevzat Han Altın, Barış Peksak, Ahmet
+Ozan Annagür
+Overall
+
+Detailed Design
+( Version 1.0)
+23 April 2024
+
+1.
+
+Introduction:
+
+Combined is a multifunctional social media app Android application that is focused on fashion,
+targeting everyday usage and allows people to get in contact with each other. Sometimes it could be
+harder to understand the user interface for the users, so we tried to keep the level of the interface
+simple. Without GUI it is quite challenging so GUI takes a crucial part in our app. This app for now
+will focus on Bilkenters only. It can be difficult to manage and follow a social media app that doesn't
+focus on a specific community, which is why this app is exclusively for Bilkent students. Combined
+has two main features. Firstly, it allows you to share your combine on an online platform where others
+can view it. Secondly, it has ranking and comment pages that give others the chance to rate and
+comment on your combine out of 5. This is a great opportunity for you to get feedback and improve
+your combine.
+
+2.
+
+System Overview
+
+1.
+
+Frontend
+
+1.1. Android Studio
+As Combined will be an Android-based software, we are using Android Studio for developing the
+user interface and frontend. The layout editor feature significantly alleviates the burden on editors,
+and its integration with third-party software like Figma makes the design process much easier.
+Additionally, through the emulator, we can see how our application will appear on any device or how
+it will respond to specific inputs. Moreover, it can be easily integrated with Firebase, which we
+consider to be its biggest advantage for our database needs.
+
+Inst
+
+1.2. Firebase
+Firebase is one of the most used mobile and web application development platforms among all the
+platforms Google offers. Since all Firebase services are integrated with others, it is one of the best
+options currently on the market. It provides useful tools to developers for application development,
+updating, auditing, viewing user performance, and much more!
+
+1.2.1. Firebase Authentication
+In social media applications, it is essential to know the identity of each user. Knowing the user's
+identity provides great flexibility for the user to access their account from different devices while
+reducing confusion while uploading each user’s data to the collective database. Firebase
+Authentication is an application that allows users to sign up and log in using their email and password.
+Additionally, after signing up, Firebase provides users with a unique user ID and a frequently
+changing token. Supporting popular unified identity providers like Google, Facebook, and Twitter
+makes it one of the best options. We will use Firebase Authentication on the sign-in page.
+
+2.
+
+Data
+
+2.1. Firebase
+2.1.1. Cloud Storage
+Firebase Cloud Storage is designed to store and serve user-generated content such as photos and
+videos. With its broad permission spectrum, it's easy to adjust who can access which file.
+Additionally, file upload and download processes occur independently of network quality,
+considering users without a stable internet connection. We will use Firebase Cloud Storage to securely
+store user posts and profile pictures.
+
+2.1.2. Cloud Firestore
+Being more flexible, scalable, serverless, and NoSQL are some of the features that distinguish
+Firestore from Cloud Storage. Data in Firestore is stored in collections, allowing developers to
+personalize them as they wish. Listeners in Firestore track changes happening in the application in
+real-time, and once the necessary operations are applied, the result is instantly reflected in the
+application interface. Similar to Cloud Storage, it also operates independently of network quality. We
+will use Cloud Firestore to store numerical and textual values in the comment, ranking, profile, and
+podium pages.
+
+3.
+
+Design Details
+
+3.1
+
+Model Classes and Interfaces
+
+The User class represents the user who is using this app, and it stores information about that user.
+Stored data are ID, username, email, password, biography, rank, and boolean for whether the user is
+an advisor or not. It also stores the user's friends list and old posts. The user class also has an
+inheritance relationship with classes CurrentUser and OtherUser. Those two subclasss differentiate
+who is the current user of that account. Additionally, this class has an aggregation relationship with
+the Post class.
+The first subclass is CurrentUser, which represents the account user. In these classes, users can make
+changes to the information, such as changing passwords or biographies and logging out from
+accounts. Also, the user can share posts and add friends.
+The second subclass is OtherUser, which represents the users who have reached out from other
+accounts. The only information stored in this class is the user friend of the user who reached this
+OtherUser.
+The Post class represents a post. It stores the information of post ID, sharer of the post, description,
+total score, photo, and boolean data, including whether it is the last sent post of the sharer. It also has
+a list of comments that hold the comment objects. This boolean is needed to determine whether the
+post is displayed on the other users’ main page. Moreover, this class has an aggregation relationship
+with the comment class.
+The comment class represents the comments of the post. Every comment class stores its own ID,
+sender, text, and boolean data to determine whether the comment sender is a friend of the displayer
+and whether the sender is an advisor. These boolean data are needed to organize the comment page.
+Since those boolean data depend on the user of the account, this comment class has a dependency
+relationship with the User class.
+
+3.2
+
+Database Schema
+
+This SQL schema is designed to manage the functionalities of Combined. The schema comprises
+various tables, including Users, Posts, Comments, and associated features.
+Users: This table stores various information about users, like their ID, username, email, password,
+profile photo URL, and personal biographies. It acts as the core focus of all user-related interactions
+inside the application.
+Posts: This table contains details about the posts made by different users. Each post record has its
+own ID, sharer ID, total rank score, description, profile photo URL, and the timestamp of creation.
+Comments: This table’s main function is storing comments made on posts. It comprises an ID that
+is special for each comment, as well as the sender’s ID, the text, and the timestamp.
+UserFriends: An arrangement to monitor user friendships. It connects the friend's user ID to the user
+ID (both referencing Users).
+UserPosts: With the help of the user ID, post ID (which refers to posts), and the creation timestamp,
+this table allows users to interact with their posts.
+PostComments: This table links comments, post ID (referencing Posts), and comment ID
+(referencing Comments) to the posts to which they belong.
+
+3.3
+
+MVC Architecture
+
+MVC is an acronym for Model-View-Controller, a software architecture pattern which makes
+it easier to manage an application by separating it to three concerns: model, view and controller.
+Model encapsulates the data and provides methods to manipulate them. Model responds to requests
+from the controller which are updating the data. We will specifically use “model” for the background
+information which users do not need to see. View presents the data to the user. It represents the UI
+
+elements such as text fields, images and buttons. We will use “view” structure for the visual parts of
+our application. Controller is the connection between model and view. Controller receives user input
+and implements actions accordingly. We will use “controller” structure for the user interactions with
+the application such as touching a button. In such a situation, the controller will handle the input,
+update the model and lastly, chooses the right view to be presented.
+
+4.
+
+Task Assignment
+
+UI Design
+
+Şebnem Bihter Keleş, Nevzat Han Altın, Barış
+Peksak, Ahmet Ozan Annagür
+
+Frontend
+
+Şebnem Bihter Keleş, Ahmet Ozan Annagür
+
+Database
+
+Ege Şeşen, Barış Peksak
+
+5.
+
+Summary & Conclusions
+
+Combined is a social media platform designed specifically for Bilkent students. It has a versatile and
+user friendly interface with a focus on simplicity and user convenience. The app is built using Android
+Studio and Firebase mainly which provides a strong foundation for both the front-end and back-end
+of the app.
+Combined integrates Firebase Authentication, Cloud Storage, and Cloud Firestore to guarantee
+security, scalability, and real-time data synchronization. This ensures a smooth user experience, even
+under poor network conditions. The app is designed to manage data effectively and foster meaningful
+interactions among users.
+The app's classes and database are meticulously designed to ensure efficient data management and
+interaction, featuring well-defined entities such as User, Post, and Comment that encapsulate essential
+user information.
+Briefly; Combined is an innovative and collaborative platform that specifically allows Bilkent
+students to keep in touch with each other.
+
+
